@@ -1,0 +1,52 @@
+\ProvidesPackage{mydefaults}
+
+% стандартные поля
+\usepackage[top=2cm,bottom=2cm,inner=3cm,outer=1.5cm, a4paper]{geometry}
+
+% математика
+\usepackage{amsmath, amssymb} 
+
+% загрузка и управление шрифтами
+\usepackage[no-math,cm-default]{fontspec} 
+
+% всякие юникодовые штуки
+\usepackage{xltxtra}
+\usepackage{xunicode}
+\usepackage{unicode-math}
+
+% используемые языки
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setkeys{russian}{babelshorthands=true}
+\setotherlanguage{english}
+
+% шрифты
+\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text, HyphenChar="00AD}
+\setmainfont{Charis SIL}
+%\newfontfamily\russianfont{Charis SIL}
+\newfontfamily\russianfont{Calibri}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmathfont{Cambria Math}
+
+% выравнивание по ширине
+\tolerance=2000
+
+% перенос составных слов
+\XeTeXinterchartokenstate=1
+\XeTeXcharclass `\- 24
+\XeTeXinterchartoks 24 0 = {\hskip\z@skip}
+\XeTeXinterchartoks 0 24 = {\nobreak}
+
+\usepackage{xecyr}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{datetime}
+
+\newcommand{\ж}[1]{\textbf{#1}}
+\newcommand{\к}[1]{\textit{#1}}
